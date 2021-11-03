@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         register = findViewById(R.id.register);
         login = findViewById(R.id.login);
         if (register == null){
-//            System.out.println("ESTE NULL!!");
             Log.d("ionut", "register e null!");
         }
         register.setOnClickListener(new View.OnClickListener() {
@@ -70,11 +69,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Boolean validateInput(UserEntity userEntity){
-        if (userEntity.getName().isEmpty() ||
-            userEntity.getPassword().isEmpty()) {
-            return false;
-        }
-        return true;
+        return !userEntity.getName().isEmpty() &&
+                !userEntity.getPassword().isEmpty();
     }
 
 }

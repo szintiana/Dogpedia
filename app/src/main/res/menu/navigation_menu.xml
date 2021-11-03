@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+
+    <item
+        android:id="@+id/nav_dogs"
+        android:title="Dogs"/>
+
+
+    <item
+        android:id="@+id/nav_myProfile"
+        android:title="My Profile" />
+
+    <item
+        android:id="@+id/nav_statistics"
+        android:title="Statistics"/>
+
+    <item
+        android:id="@+id/nav_petFood"
+        android:title="Pet Food" />
+
+    <item
+        android:id="@+id/nav_chat"
+        android:title="Chat" />
+
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings" />
+
+</menu>

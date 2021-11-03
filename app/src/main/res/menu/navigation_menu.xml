@@ -11,31 +11,33 @@
 
     <item
         android:id="@+id/nav_dogs"
-        android:title="Dogs"/>
+        android:title="Dogs"
+        android:icon="@drawable/ic_baseline_pets_24"/>
 
 
     <item
         android:id="@+id/nav_myProfile"
-        android:title="My Profile" />
+        android:title="My Profile"
+        android:icon="@drawable/ic_baseline_face_24"/>
 
     <item
         android:id="@+id/nav_statistics"
+        android:icon="@drawable/ic_baseline_eco_24"
         android:title="Statistics"/>
 
     <item
         android:id="@+id/nav_petFood"
+        android:icon="@drawable/ic_baseline_food_bank_24"
         android:title="Pet Food" />
 
     <item
         android:id="@+id/nav_chat"
+        android:icon="@drawable/ic_baseline_chat_24"
         android:title="Chat" />
 
     <item
-        android:id="@+id/nav_logout"
-        android:title="Logout" />
-
-    <item
         android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
         android:title="Settings" />
 
 </menu>

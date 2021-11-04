@@ -5,6 +5,11 @@
     tools:ignore="HardcodedText">
 
     <item
+        android:id="@+id/nav_myProfile"
+        android:title="My Profile"
+        android:icon="@drawable/ic_baseline_face_24"/>
+
+    <item
         android:id="@+id/nav_home"
         android:title="Home"
         android:icon="@drawable/ic_baseline_home_24"/>
@@ -13,12 +18,6 @@
         android:id="@+id/nav_dogs"
         android:title="Dogs"
         android:icon="@drawable/ic_baseline_pets_24"/>
-
-
-    <item
-        android:id="@+id/nav_myProfile"
-        android:title="My Profile"
-        android:icon="@drawable/ic_baseline_face_24"/>
 
     <item
         android:id="@+id/nav_statistics"

@@ -1,26 +1,20 @@
 package com.example.dogpedia;
 
-import androidx.annotation.NonNull;
+import android.content.Context;
+import android.content.Intent;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.TextView;
-
 import java.util.Objects;
 
-public abstract class HomeScreen extends AppCompatActivity {
+public class NavigationDrawer extends AppCompatActivity {
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_screen);
+    public void initialize(){
         drawerLayout = findViewById(R.id.my_drawer_layout);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
 
@@ -31,35 +25,32 @@ public abstract class HomeScreen extends AppCompatActivity {
 
         // to make the Navigation drawer icon always appear on the action bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public void navigate(MenuItem item, Context context){
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             if (item.getItemId() == R.id.nav_chat) {
                 startActivity(new Intent(
-                        this, Chat.class));
+                        context, Chat.class));
             } else if (item.getItemId() == R.id.nav_home) {
                 startActivity(new Intent(
-                        this, HomeScreen.class));
+                        context, HomeScreen.class));
             } else if (item.getItemId() == R.id.nav_dogs) {
                 startActivity(new Intent(
-                        this, Pets.class));
+                        context, Pets.class));
             } else if (item.getItemId() == R.id.nav_myProfile) {
                 startActivity(new Intent(
-                        this, MyProfile.class));
+                        context, MyProfile.class));
             } else if (item.getItemId() == R.id.nav_petFood) {
                 startActivity(new Intent(
-                        this, PetFood.class));
+                        context, PetFood.class));
             } else if (item.getItemId() == R.id.nav_settings) {
                 startActivity(new Intent(
-                        this, Settings.class));
+                        context, Settings.class));
             } else if (item.getItemId() == R.id.nav_statistics) {
                 startActivity(new Intent(
-                        this, Statistics.class));
+                        context, Statistics.class));
             }
         }
-        return super.onOptionsItemSelected(item);
     }
 }

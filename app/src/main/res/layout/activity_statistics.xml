@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="128dp"
             android:gravity="center"
-            android:text="HomeScreen"
+            android:text="Statistics"
             android:textSize="18sp" />
 
     </LinearLayout>

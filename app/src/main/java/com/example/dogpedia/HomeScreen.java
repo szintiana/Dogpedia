@@ -5,7 +5,6 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,7 +12,9 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public abstract class HomeScreen extends AppCompatActivity {
+public class HomeScreen extends AppCompatActivity {
+
+    TextView tName;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
 
@@ -31,11 +32,16 @@ public abstract class HomeScreen extends AppCompatActivity {
 
         // to make the Navigation drawer icon always appear on the action bar
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
     }
 
+    // override the onOptionsItemSelected()
+    // function to implement
+    // the item click listener callback
+    // to open and close the navigation
+    // drawer when the icon is clicked
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
         if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
             if (item.getItemId() == R.id.nav_chat) {
                 startActivity(new Intent(
